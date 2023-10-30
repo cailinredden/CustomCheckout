@@ -27,7 +27,7 @@ WORKDIR /app/checkout-js
 RUN source $HOME/.nvm/nvm.sh && npm ci
 
 #Start Dev Server (will need to update later after setting up cyberduck and webdav to host)
-CMD npm run dev && npm run dev:server
+CMD source $HOME/.nvm/nvm.sh && npm run dev && npm run dev:server
 
 #Expose port 8080 (also will need to update later)
 EXPOSE 8080
