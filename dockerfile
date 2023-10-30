@@ -12,7 +12,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | b
 #Source NVM to load it into the shell environment
 SHELL ["/bin/bash", "-c"]
 #run nvm installation at the right version, may need to be updated later
-RUN source $HOME/.nvm/nvm.sh && nvm install lts
+RUN source $HOME/.nvm/nvm.sh && nvm install 18.6.0 && nvm use 18.6.0 && npm install -g npm@9.0.0
 
 #The contents of checkout-js will be placed in this directory in the container
 RUN mkdir /app
