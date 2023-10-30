@@ -3,8 +3,7 @@ FROM ubuntu:20.04
 
 #Update and install packages necessary
 RUN apt-get update \
-&& apt-get install -y git curl \
-&& apt-get -y autoclean
+&& apt-get install -y git curl
 
 #Install node version manager nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
