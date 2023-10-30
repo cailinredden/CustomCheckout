@@ -18,7 +18,7 @@ RUN source $HOME/.nvm/nvm.sh && nvm install 18.6.0 && nvm use 18.6.0 && npm inst
 RUN mkdir /app
 
 #Clone the Github repo into the /app directory in the container
-RUN git clone https://github.com/cailinredden/customcheckout.git /app
+RUN git clone https://github.com/cailinredden/customcheckout.git /app/customcheckout
 
 #Set the directory I will be working in container as checkout-js
 WORKDIR /app/customcheckout/checkout-js
