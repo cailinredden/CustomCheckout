@@ -2,9 +2,9 @@
 FROM ubuntu:20.04
 
 #Update and install packages necessary
-RUN apt-get update && apt-get install -y \
-    git \
-    curl
+RUN apt-get update \
+&& apt-get install -y git curl \
+&& apt-get -y autoclean
 
 #Install node version manager nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
@@ -31,3 +31,4 @@ CMD source $HOME/.nvm/nvm.sh && npm run dev && npm run dev:server
 
 #Expose port 8080 (also will need to update later)
 EXPOSE 8080
+
